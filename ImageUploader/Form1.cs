@@ -27,9 +27,20 @@ namespace ImageUploader
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'myImages.Image_Uploads' table. You can move, or remove it, as needed.
             this.image_UploadsTableAdapter.Fill(this.myImages.Image_Uploads);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Images only. | *.jpg; *.jpeg; *png; *.gif;";
+
+            DialogResult dr = openFileDialog.ShowDialog();
+
+            imgPictureBox.Image = Image.FromFile(openFileDialog.FileName);
+
+            imgPathLabel1.Text = openFileDialog.FileName;
         }
     }
 }

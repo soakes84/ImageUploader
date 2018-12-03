@@ -56,6 +56,7 @@
             this.imgPathLabel1 = new System.Windows.Forms.Label();
             this.imgPictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             idLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             imgPathLabel = new System.Windows.Forms.Label();
@@ -215,7 +216,7 @@
             // 
             idLabel.AutoSize = true;
             idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(63, 56);
+            idLabel.Location = new System.Drawing.Point(63, 70);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(25, 20);
             idLabel.TabIndex = 1;
@@ -223,8 +224,9 @@
             // 
             // idLabel1
             // 
+            this.idLabel1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.idLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.image_UploadsBindingSource, "id", true));
-            this.idLabel1.Location = new System.Drawing.Point(118, 53);
+            this.idLabel1.Location = new System.Drawing.Point(118, 67);
             this.idLabel1.Name = "idLabel1";
             this.idLabel1.Size = new System.Drawing.Size(100, 23);
             this.idLabel1.TabIndex = 2;
@@ -234,7 +236,7 @@
             // 
             nameLabel.AutoSize = true;
             nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nameLabel.Location = new System.Drawing.Point(48, 94);
+            nameLabel.Location = new System.Drawing.Point(48, 108);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(55, 20);
             nameLabel.TabIndex = 3;
@@ -243,7 +245,7 @@
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.image_UploadsBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(121, 96);
+            this.nameTextBox.Location = new System.Drawing.Point(121, 110);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(122, 20);
             this.nameTextBox.TabIndex = 4;
@@ -252,7 +254,7 @@
             // 
             imgPathLabel.AutoSize = true;
             imgPathLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            imgPathLabel.Location = new System.Drawing.Point(38, 134);
+            imgPathLabel.Location = new System.Drawing.Point(38, 148);
             imgPathLabel.Name = "imgPathLabel";
             imgPathLabel.Size = new System.Drawing.Size(77, 20);
             imgPathLabel.TabIndex = 5;
@@ -260,8 +262,9 @@
             // 
             // imgPathLabel1
             // 
+            this.imgPathLabel1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.imgPathLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.image_UploadsBindingSource, "ImgPath", true));
-            this.imgPathLabel1.Location = new System.Drawing.Point(118, 134);
+            this.imgPathLabel1.Location = new System.Drawing.Point(118, 148);
             this.imgPathLabel1.Name = "imgPathLabel1";
             this.imgPathLabel1.Size = new System.Drawing.Size(150, 23);
             this.imgPathLabel1.TabIndex = 6;
@@ -271,7 +274,7 @@
             // 
             imgLabel.AutoSize = true;
             imgLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            imgLabel.Location = new System.Drawing.Point(63, 175);
+            imgLabel.Location = new System.Drawing.Point(63, 189);
             imgLabel.Name = "imgLabel";
             imgLabel.Size = new System.Drawing.Size(40, 20);
             imgLabel.TabIndex = 7;
@@ -280,7 +283,7 @@
             // imgPictureBox
             // 
             this.imgPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.image_UploadsBindingSource, "Img", true));
-            this.imgPictureBox.Location = new System.Drawing.Point(121, 175);
+            this.imgPictureBox.Location = new System.Drawing.Point(121, 189);
             this.imgPictureBox.Name = "imgPictureBox";
             this.imgPictureBox.Size = new System.Drawing.Size(150, 150);
             this.imgPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -289,13 +292,22 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(121, 341);
+            this.button1.Location = new System.Drawing.Point(121, 355);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 43);
             this.button1.TabIndex = 9;
             this.button1.Text = " Upload Image";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 10;
             // 
             // Form1
             // 
@@ -303,6 +315,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(377, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idLabel1);
@@ -314,6 +327,7 @@
             this.Controls.Add(this.imgPictureBox);
             this.Controls.Add(this.image_UploadsBindingNavigator);
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -354,6 +368,7 @@
         private System.Windows.Forms.Label imgPathLabel1;
         private System.Windows.Forms.PictureBox imgPictureBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
