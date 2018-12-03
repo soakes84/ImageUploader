@@ -113,7 +113,7 @@
             this.image_UploadsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.image_UploadsBindingNavigator.Name = "image_UploadsBindingNavigator";
             this.image_UploadsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.image_UploadsBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.image_UploadsBindingNavigator.Size = new System.Drawing.Size(377, 25);
             this.image_UploadsBindingNavigator.TabIndex = 0;
             this.image_UploadsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -214,34 +214,36 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(63, 72);
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(63, 56);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(18, 13);
+            idLabel.Size = new System.Drawing.Size(25, 20);
             idLabel.TabIndex = 1;
             idLabel.Text = "id:";
             // 
             // idLabel1
             // 
             this.idLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.image_UploadsBindingSource, "id", true));
-            this.idLabel1.Location = new System.Drawing.Point(143, 72);
+            this.idLabel1.Location = new System.Drawing.Point(118, 53);
             this.idLabel1.Name = "idLabel1";
             this.idLabel1.Size = new System.Drawing.Size(100, 23);
             this.idLabel1.TabIndex = 2;
-            this.idLabel1.Text = "label1";
+            this.idLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(63, 105);
+            nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nameLabel.Location = new System.Drawing.Point(48, 94);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(38, 13);
+            nameLabel.Size = new System.Drawing.Size(55, 20);
             nameLabel.TabIndex = 3;
             nameLabel.Text = "Name:";
             // 
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.image_UploadsBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(124, 98);
+            this.nameTextBox.Location = new System.Drawing.Point(121, 96);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(122, 20);
             this.nameTextBox.TabIndex = 4;
@@ -249,27 +251,29 @@
             // imgPathLabel
             // 
             imgPathLabel.AutoSize = true;
-            imgPathLabel.Location = new System.Drawing.Point(63, 141);
+            imgPathLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            imgPathLabel.Location = new System.Drawing.Point(38, 134);
             imgPathLabel.Name = "imgPathLabel";
-            imgPathLabel.Size = new System.Drawing.Size(52, 13);
+            imgPathLabel.Size = new System.Drawing.Size(77, 20);
             imgPathLabel.TabIndex = 5;
             imgPathLabel.Text = "Img Path:";
             // 
             // imgPathLabel1
             // 
             this.imgPathLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.image_UploadsBindingSource, "ImgPath", true));
-            this.imgPathLabel1.Location = new System.Drawing.Point(121, 131);
+            this.imgPathLabel1.Location = new System.Drawing.Point(118, 134);
             this.imgPathLabel1.Name = "imgPathLabel1";
-            this.imgPathLabel1.Size = new System.Drawing.Size(100, 23);
+            this.imgPathLabel1.Size = new System.Drawing.Size(150, 23);
             this.imgPathLabel1.TabIndex = 6;
-            this.imgPathLabel1.Text = "label1";
+            this.imgPathLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // imgLabel
             // 
             imgLabel.AutoSize = true;
+            imgLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             imgLabel.Location = new System.Drawing.Point(63, 175);
             imgLabel.Name = "imgLabel";
-            imgLabel.Size = new System.Drawing.Size(27, 13);
+            imgLabel.Size = new System.Drawing.Size(40, 20);
             imgLabel.TabIndex = 7;
             imgLabel.Text = "Img:";
             // 
@@ -297,7 +301,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.LightBlue;
+            this.ClientSize = new System.Drawing.Size(377, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idLabel1);
@@ -308,8 +313,11 @@
             this.Controls.Add(imgLabel);
             this.Controls.Add(this.imgPictureBox);
             this.Controls.Add(this.image_UploadsBindingNavigator);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Images";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.myImages)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.image_UploadsBindingSource)).EndInit();
